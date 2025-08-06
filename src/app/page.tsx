@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [messages, setMessages] = useState([
-    { role: "system", content: "You are Uzor, a helpful AI assistant." },
+    { role: "system", content: "You are Dave-Agent, a helpful AI assistant." },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gray-900 text-white p-6 flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-6">🤖 Uzor Chatbot</h1>
+      <h1 className="text-3xl font-bold mb-6">🤖 Dave-Agent</h1>
 
       <div className="w-full max-w-2xl space-y-4 bg-gray-800 p-4 rounded-lg overflow-y-auto h-[70vh]">
         {messages.slice(1).map((msg, i) => (
@@ -55,7 +55,7 @@ export default function Home() {
             }`}
           >
             <p>
-              <strong>{msg.role === "user" ? "You" : "Uzor"}:</strong>{" "}
+              <strong>{msg.role === "user" ? "You" : "Dave-Agent"}:</strong>{" "}
               {msg.content}
             </p>
           </div>
@@ -66,7 +66,7 @@ export default function Home() {
         <input
           className="flex-1 p-3 rounded-l bg-gray-700 text-white outline-none"
           value={input}
-          placeholder="Ask Uzor something..."
+          placeholder="Ask Dave-Agent something..."
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
         />
