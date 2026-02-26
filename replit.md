@@ -31,7 +31,7 @@ public/             # Static assets
 
 ## Environment Variables
 
-- `OPENAI_API_KEY` - Required. Your OpenAI API key for GPT-3.5-turbo access.
+- `GEMINI_API_KEY` - Required. Your Google Gemini API key.
 
 ## Development
 
